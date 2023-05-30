@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Nexus Dev</string>
+    <string name="MainMenu">Читать</string>
+    <string name="SearchMenu">Поиск</string>
+    <string name="StorageMenu">Книготека</string>
+    <string name="AccountMenu">Кабинет</string>
+</resources>
