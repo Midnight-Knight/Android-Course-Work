@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="MyColorMain" format="color"/>
+    <attr name="MyColorText" format="color"/>
     <attr name="MyColorSecondary" format="color"/>
     <attr name="MyColorApp" format="color"/>
     <attr name="MyColorFootbar" format="color"/>
+    <attr name="MyColorInput" format="color"/>
 </resources>

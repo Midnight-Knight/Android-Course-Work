@@ -7,6 +7,12 @@
     android:background="?MyColorMain"
     tools:context=".SearchActivity">
 
+    <FrameLayout
+        android:id="@+id/startFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="62dp"
@@ -34,11 +40,11 @@
                 android:id="@+id/textViewFootbarMain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="?MyColorFootbar"
-                android:textSize="12dp"
-                android:gravity="center"
                 android:layout_marginTop="4dp"
-                android:text="@string/MainMenu" />
+                android:gravity="center"
+                android:text="@string/MainMenu"
+                android:textColor="?MyColorFootbar"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -59,11 +65,11 @@
                 android:id="@+id/textViewFootbarSearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="?MyColorApp"
-                android:textSize="12dp"
-                android:gravity="center"
                 android:layout_marginTop="4dp"
-                android:text="@string/SearchMenu" />
+                android:gravity="center"
+                android:text="@string/SearchMenu"
+                android:textColor="?MyColorApp"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -84,11 +90,11 @@
                 android:id="@+id/textViewFootbarStorage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="?MyColorFootbar"
-                android:textSize="12dp"
-                android:gravity="center"
                 android:layout_marginTop="4dp"
-                android:text="@string/StorageMenu" />
+                android:gravity="center"
+                android:text="@string/StorageMenu"
+                android:textColor="?MyColorFootbar"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -109,11 +115,11 @@
                 android:id="@+id/textViewFootbarAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="?MyColorFootbar"
-                android:textSize="12dp"
-                android:gravity="center"
                 android:layout_marginTop="4dp"
-                android:text="@string/AccountMenu" />
+                android:gravity="center"
+                android:text="@string/AccountMenu"
+                android:textColor="?MyColorFootbar"
+                android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
 

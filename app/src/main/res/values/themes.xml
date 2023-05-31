@@ -13,8 +13,10 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="MyColorMain">@color/white</item>
+        <item name="MyColorText">@color/black</item>
         <item name="MyColorSecondary">@color/white_gray</item>
         <item name="MyColorApp">@color/blue</item>
         <item name="MyColorFootbar">@color/footbar</item>
+        <item name="MyColorInput">@color/input_white</item>
     </style>
 </resources>
