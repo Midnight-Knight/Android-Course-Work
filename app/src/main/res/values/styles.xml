@@ -2,6 +2,7 @@
 <resources>
     <attr name="MyColorMain" format="color"/>
     <attr name="MyColorText" format="color"/>
+    <attr name="MyColorSecondText" format="color"/>
     <attr name="MyColorSecondary" format="color"/>
     <attr name="MyColorApp" format="color"/>
     <attr name="MyColorFootbar" format="color"/>

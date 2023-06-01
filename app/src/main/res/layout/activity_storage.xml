@@ -7,6 +7,12 @@
     android:background="?MyColorMain"
     tools:context=".StorageActivity">
 
+    <FrameLayout
+        android:id="@+id/startFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="62dp"

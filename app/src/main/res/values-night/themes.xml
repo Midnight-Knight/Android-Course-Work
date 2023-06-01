@@ -3,17 +3,18 @@
     <style name="Theme.NexusDev" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">?MyColorMain</item>
+        <item name="colorOnPrimary">?MyColorMain</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">?MyColorMain</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="MyColorMain">@color/my_black</item>
         <item name="MyColorText">@color/white</item>
+        <item name="MyColorSecondText">@color/white_gray</item>
         <item name="MyColorSecondary">@color/black_gray</item>
         <item name="MyColorApp">@color/blue</item>
         <item name="MyColorFootbar">@color/footbar</item>
