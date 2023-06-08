@@ -5,45 +5,80 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class StorageActivity extends AppCompatActivity {
+    private Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_storage);
-        Fragment fragment = new StorageFragment();
+
+        if (savedInstanceState != null) {
+            fragment = getSupportFragmentManager().getFragment(savedInstanceState, "currentFragment");
+        } else {
+            fragment = new StorageFragment();
+        }
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.startFragment, fragment);
         fragmentTransaction.commit();
     }
 
-    public void MainButton(View view)
-    {
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        getSupportFragmentManager().putFragment(outState, "currentFragment", fragment);
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+    }
+
+    public void ButtonStorage(View view) {
+        Context context = getApplicationContext();
+        CharSequence text = "Недоступно";
+        int duration = Toast.LENGTH_SHORT;
+        Toast.makeText(context, text, duration).show();
+    }
+
+    public void ButtonBookStorage(View view) {
+        Context context = getApplicationContext();
+        CharSequence text = "Недоступно";
+        int duration = Toast.LENGTH_SHORT;
+        Toast.makeText(context, text, duration).show();
+    }
+
+    public void MainButton(View view) {
         Intent intent = new Intent(StorageActivity.this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
     }
 
-    public void SearchButton(View view)
-    {
+    public void SearchButton(View view) {
         Intent intent = new Intent(StorageActivity.this, SearchActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
     }
 
-    public void StorageButton(View view)
-    {
+    public void StorageButton(View view) {
         Intent intent = new Intent(StorageActivity.this, StorageActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
     }
 
-    public void AccountButton(View view)
-    {
+    public void AccountButton(View view) {
         Intent intent = new Intent(StorageActivity.this, AccountActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
     }
 }

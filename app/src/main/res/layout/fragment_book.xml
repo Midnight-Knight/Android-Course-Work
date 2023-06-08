@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/book_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="React App"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="20sp"
+                    android:textColor="?MyColorText"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:onClick="ButtonBook"
+                    android:text="Marcus"
+                    android:textColor="?MyColorApp"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="Frontend · React · JS"
+                    android:textColor="?MyColorApp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="Рейтинг: 5.0 · Подписчиков: 123456 · 2023 "
+                    android:textColor="?MyColorSecondText"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:onClick="ButtonBook"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="0dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?MyColorApp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/loading" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="Загрузить"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:onClick="ButtonBook"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="0dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?MyColorApp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/plus" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="Добавить"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_bottom_bar"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_top_bar"
+                    android:gravity="center_vertical"
+                    android:onClick="ButtonArticle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="33dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | right"
+                        android:text="1."
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | left"
+                        android:maxLines="1"
+                        android:text="React npm"
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_top_bar"
+                    android:gravity="center_vertical"
+                    android:onClick="ButtonBook"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="33dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | right"
+                        android:text="2."
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | left"
+                        android:maxLines="1"
+                        android:text="React фундамент проекта"
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_top_bar"
+                    android:gravity="center_vertical"
+                    android:onClick="ButtonBook"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="33dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | right"
+                        android:text="3."
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | left"
+                        android:maxLines="1"
+                        android:text="React return"
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_top_bar"
+                    android:gravity="center_vertical"
+                    android:onClick="ButtonBook"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="33dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | right"
+                        android:text="4."
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | left"
+                        android:maxLines="1"
+                        android:text="React useState"
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp"
+                        android:layout_marginRight="8dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_top_bar"
+                    android:gravity="center_vertical"
+                    android:onClick="ButtonBook"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="33dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | right"
+                        android:text="5."
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | left"
+                        android:maxLines="1"
+                        android:text="React module.css"
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_top_bar"
+                    android:gravity="center_vertical"
+                    android:onClick="ButtonBook"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="33dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | right"
+                        android:text="6."
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | left"
+                        android:maxLines="1"
+                        android:text="React useEffect"
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_top_bar"
+                    android:gravity="center_vertical"
+                    android:onClick="ButtonBook"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="33dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | right"
+                        android:text="7."
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | left"
+                        android:maxLines="1"
+                        android:text="React Class"
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_top_bar"
+                    android:gravity="center_vertical"
+                    android:onClick="ButtonBook"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="33dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | right"
+                        android:text="8."
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | left"
+                        android:maxLines="1"
+                        android:text="React Render"
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_top_bar"
+                    android:gravity="center_vertical"
+                    android:onClick="ButtonBook"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="33dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | right"
+                        android:text="9."
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | left"
+                        android:maxLines="1"
+                        android:text="React API (axios)"
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/background_top_bar"
+                    android:gravity="center_vertical"
+                    android:onClick="ButtonBook"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="33dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | right"
+                        android:text="10."
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical | left"
+                        android:maxLines="1"
+                        android:text="React приложение, онлайн календарь"
+                        android:textColor="?MyColorText"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="78dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="21 марта 2023 г."
+                    android:textColor="?MyColorSecondText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8 статей, 7891 слов"
+                    android:textColor="?MyColorSecondText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Автор"
+                    android:textColor="?MyColorSecondText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/background_top_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="ButtonBack"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="React App"
+            android:textColor="?MyColorText"
+            android:textSize="24dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
